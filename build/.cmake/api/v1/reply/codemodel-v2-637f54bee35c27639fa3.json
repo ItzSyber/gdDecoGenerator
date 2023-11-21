@@ -1,0 +1,904 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "libraries/geometrize",
+					"jsonFile" : "directory-libraries.geometrize-Debug-5e19e4bda3b2e4255d1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libraries/geometrize",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "libraries/fmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.fmt-Debug-f5fa85c358238e688d54.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libraries/fmt",
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"build" : "libraries/minhook",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.minhook-Debug-231eedfd2a153e16eb5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "libraries/minhook",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "libraries/cocos-headers",
+					"jsonFile" : "directory-libraries.cocos-headers-Debug-478791ff6354370498a7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "libraries/cocos-headers",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "gdDecoGenerator",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "FMT",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "minhook",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "cocos-headers",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-8b8bc3f31df64327e003.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@02464759dd67601a9918",
+					"jsonFile" : "target-ALL_BUILD-Debug-3b09d0fa167279adf43a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@7605efca7753b9cb6432",
+					"jsonFile" : "target-ALL_BUILD-Debug-87ebffe5f73012cceeae.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@aaf74036f3bba581c610",
+					"jsonFile" : "target-ALL_BUILD-Debug-6fb7718d01cfb648724c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-fa3ff05d0c2e2f1b46b6.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "fmt::@02464759dd67601a9918",
+					"jsonFile" : "target-fmt-Debug-538a7c3f6ec56d8954e8.json",
+					"name" : "fmt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gdDecoGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gdDecoGenerator-Debug-b39fbbaff7079d2c8364.json",
+					"name" : "gdDecoGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "geometrize::@2d2b93ed39058c38313e",
+					"jsonFile" : "target-geometrize-Debug-78e70cefdca7ba22f84c.json",
+					"name" : "geometrize",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "minhook::@7605efca7753b9cb6432",
+					"jsonFile" : "target-minhook-Debug-e7879ac037f1cea1662b.json",
+					"name" : "minhook",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "libraries/geometrize",
+					"jsonFile" : "directory-libraries.geometrize-Release-5e19e4bda3b2e4255d1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libraries/geometrize",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "libraries/fmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.fmt-Release-ecdeb5df4f34b28669dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libraries/fmt",
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"build" : "libraries/minhook",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.minhook-Release-5727fe411f08f8b01d8d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "libraries/minhook",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "libraries/cocos-headers",
+					"jsonFile" : "directory-libraries.cocos-headers-Release-478791ff6354370498a7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "libraries/cocos-headers",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "gdDecoGenerator",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "FMT",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "minhook",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "cocos-headers",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-8b8bc3f31df64327e003.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@02464759dd67601a9918",
+					"jsonFile" : "target-ALL_BUILD-Release-3b09d0fa167279adf43a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@7605efca7753b9cb6432",
+					"jsonFile" : "target-ALL_BUILD-Release-87ebffe5f73012cceeae.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@aaf74036f3bba581c610",
+					"jsonFile" : "target-ALL_BUILD-Release-6fb7718d01cfb648724c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-fa3ff05d0c2e2f1b46b6.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "fmt::@02464759dd67601a9918",
+					"jsonFile" : "target-fmt-Release-fd0506a120b859c75e2c.json",
+					"name" : "fmt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gdDecoGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gdDecoGenerator-Release-4eeb6b24b7ce5b3f6c79.json",
+					"name" : "gdDecoGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "geometrize::@2d2b93ed39058c38313e",
+					"jsonFile" : "target-geometrize-Release-706ba9fb7270a158a6ae.json",
+					"name" : "geometrize",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "minhook::@7605efca7753b9cb6432",
+					"jsonFile" : "target-minhook-Release-d98042160c0abb2ed05d.json",
+					"name" : "minhook",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "libraries/geometrize",
+					"jsonFile" : "directory-libraries.geometrize-MinSizeRel-5e19e4bda3b2e4255d1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libraries/geometrize",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "libraries/fmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.fmt-MinSizeRel-b6b00d8d778d5a3e853c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libraries/fmt",
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"build" : "libraries/minhook",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.minhook-MinSizeRel-3423175914348b82d275.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "libraries/minhook",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "libraries/cocos-headers",
+					"jsonFile" : "directory-libraries.cocos-headers-MinSizeRel-478791ff6354370498a7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "libraries/cocos-headers",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "gdDecoGenerator",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "FMT",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "minhook",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "cocos-headers",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-8b8bc3f31df64327e003.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@02464759dd67601a9918",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-3b09d0fa167279adf43a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@7605efca7753b9cb6432",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-87ebffe5f73012cceeae.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@aaf74036f3bba581c610",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-6fb7718d01cfb648724c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-fa3ff05d0c2e2f1b46b6.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "fmt::@02464759dd67601a9918",
+					"jsonFile" : "target-fmt-MinSizeRel-db5aa903b37753d3b84f.json",
+					"name" : "fmt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gdDecoGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gdDecoGenerator-MinSizeRel-cc7d176d88feaa5cdcda.json",
+					"name" : "gdDecoGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "geometrize::@2d2b93ed39058c38313e",
+					"jsonFile" : "target-geometrize-MinSizeRel-92d217008b6a56348ef6.json",
+					"name" : "geometrize",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "minhook::@7605efca7753b9cb6432",
+					"jsonFile" : "target-minhook-MinSizeRel-4214f007d526ac2adf6b.json",
+					"name" : "minhook",
+					"projectIndex" : 2
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "libraries/geometrize",
+					"jsonFile" : "directory-libraries.geometrize-RelWithDebInfo-5e19e4bda3b2e4255d1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libraries/geometrize",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "libraries/fmt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.fmt-RelWithDebInfo-09dc666d6a54d705b1bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libraries/fmt",
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"build" : "libraries/minhook",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libraries.minhook-RelWithDebInfo-f4999cad3aa6fbbb752d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "libraries/minhook",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "libraries/cocos-headers",
+					"jsonFile" : "directory-libraries.cocos-headers-RelWithDebInfo-478791ff6354370498a7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "libraries/cocos-headers",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "gdDecoGenerator",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "FMT",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "minhook",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "cocos-headers",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-8b8bc3f31df64327e003.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@02464759dd67601a9918",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-3b09d0fa167279adf43a.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@7605efca7753b9cb6432",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-87ebffe5f73012cceeae.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@aaf74036f3bba581c610",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-6fb7718d01cfb648724c.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-fa3ff05d0c2e2f1b46b6.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "fmt::@02464759dd67601a9918",
+					"jsonFile" : "target-fmt-RelWithDebInfo-2b36971af92492166c3a.json",
+					"name" : "fmt",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gdDecoGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gdDecoGenerator-RelWithDebInfo-5dfac9cd5ffb2a99f798.json",
+					"name" : "gdDecoGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "geometrize::@2d2b93ed39058c38313e",
+					"jsonFile" : "target-geometrize-RelWithDebInfo-2810e60f1dfce587399c.json",
+					"name" : "geometrize",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "minhook::@7605efca7753b9cb6432",
+					"jsonFile" : "target-minhook-RelWithDebInfo-f55e39d6aac7b6d09655.json",
+					"name" : "minhook",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/source/repos/gdDecoGenerator/build",
+		"source" : "C:/Users/User/source/repos/gdDecoGenerator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

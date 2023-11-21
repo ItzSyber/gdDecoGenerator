@@ -1,0 +1,14 @@
+C:/Users/User/source/repos/gdDecoGenerator/build/CMakeFiles/gdDecoGenerator.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/CMakeFiles/INSTALL.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/geometrize/CMakeFiles/geometrize.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/geometrize/CMakeFiles/INSTALL.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/fmt/CMakeFiles/fmt.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/fmt/CMakeFiles/INSTALL.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/fmt/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/minhook/CMakeFiles/minhook.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/minhook/CMakeFiles/INSTALL.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/minhook/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/cocos-headers/CMakeFiles/INSTALL.dir
+C:/Users/User/source/repos/gdDecoGenerator/build/libraries/cocos-headers/CMakeFiles/ALL_BUILD.dir

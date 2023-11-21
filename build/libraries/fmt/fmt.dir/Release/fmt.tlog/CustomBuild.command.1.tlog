@@ -1,0 +1,10 @@
+^C:\USERS\USER\SOURCE\REPOS\GDDECOGENERATOR\LIBRARIES\FMT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/User/source/repos/gdDecoGenerator -BC:/Users/User/source/repos/gdDecoGenerator/build --check-stamp-file C:/Users/User/source/repos/gdDecoGenerator/build/libraries/fmt/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

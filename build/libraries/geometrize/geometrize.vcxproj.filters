@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\bitmap\bitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\bitmap\rgba.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\commonutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\bitmapdataexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\bitmapexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\shapearrayexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\shapejsonexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\shapeserializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\exporter\svgexporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\rasterizer\rasterizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\rasterizer\scanline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\runner\imagerunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\circle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\ellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\polyline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\quadraticbezier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\rotatedellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\rotatedrectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\shapefactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\shapemutator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\shapetypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\shape\triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\geometrize\state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\User\source\repos\gdDecoGenerator\libraries\geometrize\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{53263197-F62E-3809-854F-39F279E1A82D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
