@@ -19,12 +19,6 @@ bool sd2gdClient::init() {
     return true;
 }
 
-void sd2gdClient::FLAlert_Clicked(gd::FLAlertLayer*, bool btn2) {
-    if(!btn2) {
-        FLAlertLayer::create(nullptr, "Test", "OK", nullptr, "sd2gdClient reazlization")->show();
-    }
-}
-
 void sd2gdClient::request() {
     char const* data = R"({
         "key": "KEY",
@@ -34,7 +28,7 @@ void sd2gdClient::request() {
         "width": "768",
         "height": "512",
         "samples": "1",
-        "num_inference_steps": "30",
+        "num_inference_steps": "24",
         "safety_checker": "yes",
         "enhance_prompt": "no",
         "seed": null,
@@ -55,15 +49,15 @@ void sd2gdClient::request() {
         "track_id": null
     })";
 
+    //changing key
     rapidjson::Document docData;
     docData.Parse(data);
-
     docData["key"] = Value(inputKey.c_str(), docData.GetAllocator());
     
+    //converting to str
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     docData.Accept(writer);
-
     char const* newData = buffer.GetString();
     CCString* dataToSend =  CCString::create(newData);
 
@@ -80,7 +74,6 @@ void sd2gdClient::request() {
     request->setTag("POST Request");
 
     cocos2d::extension::CCHttpClient::getInstance()->send(request);
-
     request->release();
 }
 
@@ -92,8 +85,7 @@ void sd2gdClient::handleResponse(cocos2d::extension::CCHttpClient* sender, cocos
 
     if (!response->isSucceed())
     {
-        auto flalert = gd::FLAlertLayer::create(nullptr, "Error", "OK", nullptr, "Response is not succeed.\nTry again later.");
-        flalert->show();
+        gd::FLAlertLayer::create(nullptr, "Error", "OK", nullptr, "Response is not succeed.\nTry again later.")->show();
         load->keyBackClicked();
         return;
     }
@@ -110,18 +102,21 @@ void sd2gdClient::handleResponse(cocos2d::extension::CCHttpClient* sender, cocos
 
     if (!isSuccess) {
         if (jsonResponse.HasMember("message")) {
+            //error or failed
             const Value& message = jsonResponse["message"];
             const char* msg = message.GetString();
             gd::FLAlertLayer::create(nullptr, "SD API Error", "OK", nullptr, msg)->show();
             load->keyBackClicked();
             return;
         } else {
+            //processing
             const char* msg = "Generation timed out.\nTry again later.";
             gd::FLAlertLayer::create(nullptr, "SD API Error", "OK", nullptr, msg)->show();
             load->keyBackClicked();
             return;
         }
     } else {
+        //success
         const Value& outp = jsonResponse["output"];
         if (outp.IsArray()) {
             const char* url = outp[0].GetString();
@@ -148,8 +143,7 @@ void sd2gdClient::LoadImageFromResponse(cocos2d::extension::CCHttpClient* client
 
     if (!response->isSucceed()) {
         std::string err = fmt::format("Something went wrong...\nDetails: {}", response->getErrorBuffer()); 
-        auto flalert = gd::FLAlertLayer::create(nullptr, "HTTP Error", "OK", nullptr, err.c_str());
-        flalert->show();
+        gd::FLAlertLayer::create(nullptr, "Error", "OK", nullptr, err.c_str())->show();
         load->keyBackClicked();
         return;
     }
