@@ -26,8 +26,35 @@ void sd2gdClient::FLAlert_Clicked(gd::FLAlertLayer*, bool btn2) {
 }
 
 void sd2gdClient::request() {
-    char const* data = "{\"key\":\"KEY\",\"model_id\":\"dreamshaper-v7\",\"prompt\":\"a screenshot of a ((varied level)) from a (((2d))) platformer game, ((front view)), geometry dash, (buildings), (obstacles), matching colors, hyperdetailed\",\"negative_prompt\":\"((3d)), ((nature)), ((pixel style)), ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face\",\"width\":\"768\",\"height\":\"512\",\"samples\":\"1\",\"num_inference_steps\":\"30\",\"safety_checker\":\"yes\",\"enhance_prompt\":\"no\",\"seed\":null,\"guidance_scale\":7.5,\"multi_lingual\":\"no\",\"panorama\":\"no\",\"self_attention\":\"no\",\"upscale\":\"no\",\"embeddings_model\":null,\"lora_model\":null,\"tomesd\":\"yes\",\"clip_skip\":\"2\",\"use_karras_sigmas\":\"yes\",\"vae\":null,\"lora_strength\":null,\"scheduler\":\"DPMSolverSinglestepScheduler\",\"webhook\":null,\"track_id\":null}";
-    
+    char const* data = R"({
+        "key": "KEY",
+        "model_id": "dreamshaper-v7",
+        "prompt": "a screenshot of a ((varied level)) from a (((2d))) platformer game, ((front view)), (geometry dash:0.5), (buildings), (obstacles), matching colors, hyperdetailed",
+        "negative_prompt": "((3d)), ((nature)), ((pixel style)), ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face",
+        "width": "768",
+        "height": "512",
+        "samples": "1",
+        "num_inference_steps": "30",
+        "safety_checker": "yes",
+        "enhance_prompt": "no",
+        "seed": null,
+        "guidance_scale": 7.5,
+        "multi_lingual": "no",
+        "panorama": "no",
+        "self_attention": "no",
+        "upscale": "no",
+        "embeddings_model": null,
+        "lora_model": null,
+        "tomesd": "yes",
+        "clip_skip": "2",
+        "use_karras_sigmas": "yes",
+        "vae": null,
+        "lora_strength": null,
+        "scheduler": "DPMSolverSinglestepScheduler",
+        "webhook": null,
+        "track_id": null
+    })";
+
     rapidjson::Document docData;
     docData.Parse(data);
 
@@ -47,7 +74,7 @@ void sd2gdClient::request() {
     request->setUrl("https://stablediffusionapi.com/api/v4/dreambooth");
 
     request->setRequestType(cocos2d::extension::CCHttpRequest::kHttpPost);
-    request->setResponseCallback(this, httpresponse_selector(sd2gdClient::handleResponseGen));
+    request->setResponseCallback(this, httpresponse_selector(sd2gdClient::handleResponse));
     request->setRequestData(dataToSend->getCString(), dataToSend->length());
     request->setHeaders(headers);
     request->setTag("POST Request");
@@ -57,7 +84,7 @@ void sd2gdClient::request() {
     request->release();
 }
 
-void sd2gdClient::handleResponseGen(cocos2d::extension::CCHttpClient* sender, cocos2d::extension::CCHttpResponse* response) {
+void sd2gdClient::handleResponse(cocos2d::extension::CCHttpClient* sender, cocos2d::extension::CCHttpResponse* response) {
     if (!response)
     {
         return;
@@ -65,7 +92,7 @@ void sd2gdClient::handleResponseGen(cocos2d::extension::CCHttpClient* sender, co
 
     if (!response->isSucceed())
     {
-        auto flalert = gd::FLAlertLayer::create(nullptr, "Error", "OK", nullptr, "Response is not succeed.\nCheck your internet connection.");
+        auto flalert = gd::FLAlertLayer::create(nullptr, "Error", "OK", nullptr, "Response is not succeed.\nTry again later.");
         flalert->show();
         load->keyBackClicked();
         return;
@@ -76,41 +103,45 @@ void sd2gdClient::handleResponseGen(cocos2d::extension::CCHttpClient* sender, co
 
     rapidjson::Document jsonResponse;
     jsonResponse.Parse(str_response.c_str());
+    
+    std::string status = jsonResponse["status"].GetString();
 
-    const Value& status = jsonResponse["status"];
-    const Value& message = jsonResponse["message"];
-    bool errEnabled = false;
+    bool isSuccess = status == "success" ? true : false;
 
-    if (status.GetString() == "error" || status.GetString() == "failed") {
-        const char* msg = message.GetString();
-        
-        auto flalert = gd::FLAlertLayer::create(nullptr, "SD API Error", "OK", nullptr, msg);
-        flalert->show();
-        errEnabled = true;
-        load->keyBackClicked();
-    }
-
-    if (!errEnabled) {
+    if (!isSuccess) {
+        if (jsonResponse.HasMember("message")) {
+            const Value& message = jsonResponse["message"];
+            const char* msg = message.GetString();
+            gd::FLAlertLayer::create(nullptr, "SD API Error", "OK", nullptr, msg)->show();
+            load->keyBackClicked();
+            return;
+        } else {
+            const char* msg = "Generation timed out.\nTry again later.";
+            gd::FLAlertLayer::create(nullptr, "SD API Error", "OK", nullptr, msg)->show();
+            load->keyBackClicked();
+            return;
+        }
+    } else {
         const Value& outp = jsonResponse["output"];
         if (outp.IsArray()) {
             const char* url = outp[0].GetString();
             sd2gdClient::saveImageFromURL(url);
         }
-    }
 
+    }
 }
 
 void sd2gdClient::saveImageFromURL(const char* url) {
     cocos2d::extension::CCHttpRequest* request = new cocos2d::extension::CCHttpRequest();
     request->setUrl(url);
     request->setRequestType(cocos2d::extension::CCHttpRequest::kHttpGet);
-    request->setResponseCallback(this, httpresponse_selector(sd2gdClient::handleResponseLoad));
+    request->setResponseCallback(this, httpresponse_selector(sd2gdClient::LoadImageFromResponse));
 
     cocos2d::extension::CCHttpClient::getInstance()->send(request);
     request->release();
 }
 
-void sd2gdClient::handleResponseLoad(cocos2d::extension::CCHttpClient* client, cocos2d::extension::CCHttpResponse* response) {
+void sd2gdClient::LoadImageFromResponse(cocos2d::extension::CCHttpClient* client, cocos2d::extension::CCHttpResponse* response) {
     if (!response) {
         return;
     }
@@ -134,7 +165,7 @@ void sd2gdClient::handleResponseLoad(cocos2d::extension::CCHttpClient* client, c
     FLAlertLayer::create(nullptr, "Saving Done", "OK", nullptr, warn.c_str())->show();
     load->keyBackClicked();
 
-updateLabel(false);
+    updateLabel(false);
     if(!PROCESSING_IMAGE) {
         enableUpdateHook();
         std::thread(addImage).detach();
